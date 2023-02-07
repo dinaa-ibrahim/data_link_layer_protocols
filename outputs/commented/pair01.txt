@@ -1,0 +1,119 @@
+node0 : received msg from coordinator
+node0 : start to reading data from file
+node0 : finished reading from file...
+number of msgs = 8 and window size = 4..
+node1 : received msg from coordinator...
+node1 : Receiver to reading data from file
+node1 : finished reading from file...
+number of msgs = 16 and window size = 4..
+node0 : received self message to start sending messages at time = 3.000000
+
+node0 : will send msg with id = 0 and content = $/$An aurora, also known as the polar lights/$ or aurora polaris,$ with Duplication and piggy backing ACK = 0 at time = 3.000000
+node0 : will send msg with id = 1 and content = $is a natural light display in Earth's sky,$and piggy backing ACK = 0 at time = 3.000000
+node0 : will send msg with id = 2 and content = $predominantly seen in high-latitude regions$ with Duplication and piggy backing ACK = 0 at time = 3.000000
+node0 : will send msg with id = 3 and content = $(around"the Arctic// and Antarctic).$ Modification  with Duplication and piggy backing ACK = 0 at time = 3.000000
+
+#node0 send 0 1 2 3
+
+node1 : received message with id = 0 and content = $An aurora, also known as the polar lights$ or aurora polaris,ACK = 2   and piggy backing ACK =0 at time = 4.250000
+node1 : will send msg with id = 0 and content = $The violin, sometimes known as a fiddle$and piggy backing ACK = 1 at time = 4.250000
+node1 : will send msg with id = 1 and content = $is a wooden chordophone (string instrument)$ with Duplication and piggy backing ACK = 1 at time = 4.250000
+node1 : will drop message with id = 2 and content = $in the violin family.$and piggy backing ACK =1 at time = 4.250000
+node1 : will drop message with id = 3 and content = $Most violins have a hollow wooden body.$and piggy backing ACK =1 at time = 4.250000
+node1 : received and drop  duplicated message with id = 0 with content = $An aurora, also known as the polar lights$ or aurora polaris,and piggy backing ACK =0 at time = 4.260000
+node1 : received message with id = 1 and content = is a natural light display in Earth's sky,ACK = 2   and piggy backing ACK =0 at time = 4.300000
+node1 : received message with id = 2 and content = predominantly seen in high-latitude regionsACK = 2   and piggy backing ACK =0 at time = 4.350000
+node1 : received and drop  duplicated message with id = 2 with content = predominantly seen in high-latitude regionsand piggy backing ACK =0 at time = 4.360000
+node1 : received message with id = 3 and content = (around"the Arctic/ and Antarctic).  with Modification and NACK = 3  and piggy backing ACK =0 at time = 4.400000
+node1 : received and drop  duplicated message with id = 3 with content = (around"the Arctic/ and Antarctic).and piggy backing ACK =0 at time = 4.410000
+
+
+#node1 rec 0 1 2 3 send 0 1 drop(2 3) 
+
+node0 : received message with id = 0 and content = The violin, sometimes known as a fiddleACK = 2   and piggy backing ACK =1 at time = 6.150000
+node0 : will send msg with id = 4 and content = $Auroras display dynamic patterns of brilliant lights//$and piggy backing ACK = 1 at time = 6.150000
+node0 : will send msg with id = 5 and content = $that appear as curtains,$and piggy backing ACK = 1 at time = 6.150000
+node0 : will send msg with id = 6 and content = $rays, spirals/$$and piggy backing ACK = 1 at time = 6.150000
+node0 : will drop message with id = 7 and content = $or dynamic flickers covering the entire sky/$$and piggy backing ACK =1 at time = 6.150000
+node0 : received message with id = 1 and content = is a wooden chordophone (string instrument)ACK = 2   and piggy backing ACK =1 at time = 6.200000
+node0 : finish sending frames at time = 6.200000
+node0 : received and drop  duplicated message with id = 1 with content = is a wooden chordophone (string instrument)and piggy backing ACK =1 at time = 6.210000
+
+#node0 rec 0 1 send 4 5 6 drop(7) 
+
+node1 : received message with id = 4 and content = Auroras display dynamic patterns of brilliant lights/ACK = 2   and piggy backing ACK =1 at time = 8.400000
+node1 : will send msg with id = 4 and content = $It is the smallest and thus highest-pitched instrument$and piggy backing ACK = 5 at time = 8.400000
+node1 : will send msg with id = 5 and content = $(soprano) in the family in regular use.$and piggy backing ACK = 5 at time = 8.400000
+node1 : will send msg with id = 6 and content = $[a] The violin typically has four strings,$and piggy backing ACK = 5 at time = 8.400000
+node1 : will send msg with id = 7 and content = $(some can have five/$), usually tuned in perfect$and piggy backing ACK = 5 at time = 8.400000
+node1 : received message with id = 5 and content = that appear as curtains,ACK = 2   and piggy backing ACK =1 at time = 8.450000
+node1 : will send msg with id = 8 and content = $fifths with notes G3, D4, A4, E5,$and piggy backing ACK = 6 at time = 8.450000
+node1 : will drop message with id = 9 and content = $and is most commonly played by drawing$and piggy backing ACK =6 at time = 8.450000
+node1 : will send msg with id = 10 and content = $a bow across its strings.$and piggy backing ACK = 6 at time = 8.450000
+node1 : will send msg with id = 11 and content = $It can also be played by plucking$and piggy backing ACK = 6 at time = 8.450000
+node1 : received message with id = 6 and content = rays, spirals$ACK = 2   and piggy backing ACK =1 at time = 8.500000
+node1 : will send msg with id = 12 and content = $the svrings/$ with the fingers (pizzicato)$ Modification  with delay and piggy backing ACK = 7 at time = 8.500000
+node1 : will send msg with id = 13 and content = $and, in specialized cases, by striking$and piggy backing ACK = 7 at time = 8.500000
+node1 : will send msg with id = 14 and content = $the strings with the wooden side/$ of the bow$ with Duplication and piggy backing ACK = 7 at time = 8.500000
+node1 : will send msg with id = 15 and content = $(col legno).$and piggy backing ACK = 7 at time = 8.500000
+
+#node1 rec 4 5 6 send 4 5 6 7 8 drop (9) 10 11 12 13 14 15
+
+
+node1 : received nth as the paired node finished sending frames 
+node1 : finish sending frames at time = 8.750000
+Both nodes finished..session finished.. at time = 8.750000
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 8.860000
+node0 : received message (LOSS!!,will send nack  ) with id = 4 and content = It is the smallest and thus highest-pitched instrumentACK = 2 and piggy backing ACK =5 at time = 11.250000
+node0 : received message (LOSS!!,will send nack  ) with id = 5 and content = (soprano) in the family in regular use.ACK = 2 and piggy backing ACK =5 at time = 11.300000
+node0 : received message (LOSS!!,will send nack  ) with id = 6 and content = [a] The violin typically has four strings,ACK = 2 and piggy backing ACK =5 at time = 11.350000
+node0 : received message (LOSS!!,will send nack  ) with id = 7 and content = (some can have five$), usually tuned in perfectACK = 2 and piggy backing ACK =5 at time = 11.400000
+node0 : received message (LOSS!!,will send nack  ) with id = 8 and content = fifths with notes G3, D4, A4, E5,ACK = 2 and piggy backing ACK =6 at time = 11.500000
+node0 : received message (LOSS!!,will send nack  ) with id = 10 and content = a bow across its strings.ACK = 2 and piggy backing ACK =6 at time = 11.600000
+node0 : received message (LOSS!!,will send nack  ) with id = 11 and content = It can also be played by pluckingACK = 2 and piggy backing ACK =6 at time = 11.650000
+node0 : received message (LOSS!!,will send nack  ) with id = 13 and content = and, in specialized cases, by strikingACK = 2 and piggy backing ACK =7 at time = 11.800000
+node0 : received message (LOSS!!,will send nack  ) with id = 14 and content = the strings with the wooden side$ of the bowACK = 2 and piggy backing ACK =7 at time = 11.850000
+node0 : received message (LOSS!!,will send nack  ) with id = 14 and content = the strings with the wooden side$ of the bowACK = 2 and piggy backing ACK =7 at time = 11.860000
+node0 : received message (LOSS!!,will send nack  ) with id = 15 and content = (col legno).ACK = 2 and piggy backing ACK =7 at time = 11.900000
+node0 : received message (LOSS!!,will send nack  ) with id = 12 and content = the svrings$ with the fingers (pizzicato)  with Modification and NACK = 3and piggy backing ACK =7 at time = 14.750000
+
+
+#node0 rec 4 5 6 7 8  10 11 12 13 14 15 (waiting 2 3 9)
+
+node1 rece not ackkkkkkkk
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 14.950000
+node1 rece not ackkkkkkkk
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 15.050000
+node1 rece not ackkkkkkkk
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 15.150000
+node1 rece not ackkkkkkkk
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 15.250000
+node1 rece not ackkkkkkkk
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 15.400000
+node1 rece not ackkkkkkkk
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 15.550000
+node1 rece not ackkkkkkkk
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 15.650000
+node1 rece not ackkkkkkkk
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 15.850000
+node1 rece not ackkkkkkkk
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 15.950000
+node1 rece not ackkkkkkkk
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 16.010000
+node1 rece not ackkkkkkkk
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 16.100000
+node1 rece not ackkkkkkkk
+node1 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 19.250000

@@ -1,0 +1,110 @@
+node4 : received msg from coordinator
+node4 : start to reading data from file
+node4 : finished reading from file...
+number of msgs = 12 and window size = 4..
+node5 : received msg from coordinator...
+node5 : Receiver to reading data from file
+node5 : finished reading from file...
+number of msgs = 8 and window size = 4..
+node4 : received self message to start sending messages at time = 2.000000
+node4 : will send msg with id = 0 and content = $An enectric car is an automobile that is$ Modification and piggy backing ACK = 0 at time = 2.000000
+node4 : will send msg with id = 1 and content = $propelled by one or more electric motors,$and piggy backing ACK = 0 at time = 2.000000
+node4 : will send msg with id = 2 and content = $using energy stored in batteries.$and piggy backing ACK = 0 at time = 2.000000
+node4 : will send msg with id = 3 and content = $Compared to internal combustion engine (ICE) vehicles,$ with Duplication and piggy backing ACK = 0 at time = 2.000000
+
+#node4 send 0 1 2 4
+
+node5 : received message with id = 0 and content = An enectric car is an automobile that is  with Modification and NACK = 3  and piggy backing ACK =0 at time = 2.200000
+node5 : will send msg with id = 0 and content = $/$An aurora, also known as the polar lights/$ or aurora polaris,$ with Duplication and piggy backing ACK = 1 at time = 2.200000
+node5 : will send msg with id = 1 and content = $is a natural light display in Earth's sky,$and piggy backing ACK = 1 at time = 2.200000
+node5 : will send msg with id = 2 and content = $predominantly seen in high-latitude regions$ with Duplication and piggy backing ACK = 1 at time = 2.200000
+node5 : will send msg with id = 3 and content = $(arownd the Arctic// and Antarctic).$ Modification  with Duplication and piggy backing ACK = 1 at time = 2.200000
+node5 : received message with id = 1 and content = propelled by one or more electric motors,ACK = 2   and piggy backing ACK =0 at time = 2.250000
+node5 : received message with id = 2 and content = using energy stored in batteries.ACK = 2   and piggy backing ACK =0 at time = 2.300000
+node5 : received message with id = 3 and content = Compared to internal combustion engine (ICE) vehicles,ACK = 2   and piggy backing ACK =0 at time = 2.350000
+node5 : received and drop  duplicated message with id = 3 with content = Compared to internal combustion engine (ICE) vehicles,and piggy backing ACK =0 at time = 2.360000
+
+
+#node5 rec 0 1 2 3 send 0 1 2 3
+
+node4 : received message with id = 0 and content = $An aurora, also known as the polar lights$ or aurora polaris,ACK = 2   and piggy backing ACK =1 at time = 2.600000
+node4 : will send msg with id = 4 and content = $electric cars are quieter,$ with Duplication  with delay and piggy backing ACK = 1 at time = 2.600000
+node4 : will send msg with id = 5 and content = $have no exhaust emissions, and lower emissions overall.$and piggy backing ACK = 1 at time = 2.600000
+node4 : will send msg with id = 6 and content = $In the United States and the European Union,$and piggy backing ACK = 1 at time = 2.600000
+node4 : will send msg with id = 7 and content = $as of 4020, the total cost of ownership of recent electric vehicles$ Modification and piggy backing ACK = 1 at time = 2.600000
+node4 : received and drop  duplicated message with id = 0 with content = $An aurora, also known as the polar lights$ or aurora polaris,and piggy backing ACK =1 at time = 2.610000
+node4 : received message with id = 1 and content = is a natural light display in Earth's sky,ACK = 2   and piggy backing ACK =1 at time = 2.650000
+node4 : will send msg with id = 8 and content = $is cheaper/$ than that of equivalent ICE cars,$and piggy backing ACK = 2 at time = 2.650000
+node4 : will send msg with id = 9 and content = $due to lower fueling and maintenance costs/$/$.$and piggy backing ACK = 2 at time = 2.650000
+node4 : will send msg with id = 10 and content = $Charging an electric car can be done at a variety of charging stations;$and piggy backing ACK = 2 at time = 2.650000
+node4 : will drop message with id = 11 and content = $these charging stations can be installed in both houses// and public areas.$and piggy backing ACK =2 at time = 2.650000
+node4 : received message with id = 2 and content = predominantly seen in high-latitude regionsACK = 2   and piggy backing ACK =1 at time = 2.700000
+node4 : finish sending frames at time = 2.700000
+node4 : received and drop  duplicated message with id = 2 with content = predominantly seen in high-latitude regionsand piggy backing ACK =1 at time = 2.710000
+node4 : received message with id = 3 and content = (arownd the Arctic/ and Antarctic).  with Modification and NACK = 3  and piggy backing ACK =1 at time = 2.750000
+node4 : received and drop  duplicated message with id = 3 with content = (arownd the Arctic/ and Antarctic).and piggy backing ACK =1 at time = 2.760000
+
+
+
+#node4 rec 0 1 2 3 send 4 5 6 7 8 9 10 drop (11)
+
+node5 : received message (LOSS!!,will send nack  ) with id = 5 and content = have no exhaust emissions, and lower emissions overall.ACK = 2 and piggy backing ACK =1 at time = 3.250000
+node5 : will send msg with id = 4 and content = $Auroras display dynamic patterns of brilliant lights//$and piggy backing ACK = 4 at time = 3.250000
+node5 : will send msg with id = 5 and content = $that appear as curtains,$and piggy backing ACK = 4 at time = 3.250000
+node5 : will send msg with id = 6 and content = $rays, spirals/$$and piggy backing ACK = 4 at time = 3.250000
+node5 : will drop message with id = 7 and content = $or dynamic flickers covering the entire sky/$$and piggy backing ACK =4 at time = 3.250000
+node5 : received message (LOSS!!,will send nack  ) with id = 6 and content = In the United States and the European Union,ACK = 2 and piggy backing ACK =1 at time = 3.300000
+node5 : finish sending frames at time = 3.300000
+node5 : received message (LOSS!!,will send nack  ) with id = 7 and content = as of 4020, the total cost of ownership of recent electric vehicles  with Modification and NACK = 3and piggy backing ACK =1 at time = 3.350000
+node5 : received message (LOSS!!,will send nack  ) with id = 8 and content = is cheaper$ than that of equivalent ICE cars,ACK = 2 and piggy backing ACK =2 at time = 3.450000
+node5 : received message (LOSS!!,will send nack  ) with id = 9 and content = due to lower fueling and maintenance costs$$.ACK = 2 and piggy backing ACK =2 at time = 3.500000
+node5 : received message (LOSS!!,will send nack  ) with id = 10 and content = Charging an electric car can be done at a variety of charging stations;ACK = 2 and piggy backing ACK =2 at time = 3.550000
+node5 : received nth as the paired node finished sending frames 
+
+
+#node5 rec 5 6 7 8 9 10 (Waiting 4) send 4 5 6 drop(7) 
+
+Both nodes finished..session finished.. at time = 3.750000
+node5 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 3.810000
+node5 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 3.900000
+node5 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 3.960000
+node4 rece not ackkkkkkkk
+node4 : received message with id = 4 and content = Auroras display dynamic patterns of brilliant lights/ACK = 2   and piggy backing ACK =4 at time = 4.450000
+node4 : received message with id = 5 and content = that appear as curtains,ACK = 2   and piggy backing ACK =4 at time = 4.500000
+node4 : received message with id = 6 and content = rays, spirals$ACK = 2   and piggy backing ACK =4 at time = 4.550000
+
+#node4 red 4 5 6 
+
+node4 rece not ackkkkkkkk
+node4 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 4.750000
+node4 rece not ackkkkkkkk
+node4 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 4.850000
+node4 rece not ackkkkkkkk
+node4 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 5.000000
+node4 rece not ackkkkkkkk
+node4 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 5.100000
+node4 rece not ackkkkkkkk
+node4 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 5.200000
+node5 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 6.150000
+node5 : received message with id = 4 and content = electric cars are quieter,ACK = 2   and piggy backing ACK =1 at time = 6.200000
+
+#node5 rec 4 
+
+node5 : received and drop  duplicated message with id = 4 with content = electric cars are quieter,and piggy backing ACK =1 at time = 6.210000
+node5 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 6.250000
+node5 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 6.350000
+node4 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 8.050000
+node4 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 8.110000

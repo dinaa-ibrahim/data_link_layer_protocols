@@ -1,0 +1,2 @@
+ Self message to node0 node to start/complete sending messages at time = 3.000000
+ Self message to node0 node to start/complete sending messages at time = 3.430000

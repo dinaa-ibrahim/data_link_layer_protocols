@@ -1,0 +1,43 @@
+node0 : received msg from coordinator
+node0 : start to reading data from file
+node0 : finished reading from file...
+number of msgs = 7 and window size = 4..
+node1 : received msg from coordinator...
+node1 : Receiver to reading data from file
+node1 : finished reading from file...
+number of msgs = 16 and window size = 4..
+node0 : received self message to start sending messages at time = 3.000000
+node0 : will send msg with id = 0 and content = $A flowgr, sometimes known as a bloom or blossom$ Modification  with Duplication and piggy backing ACK = 0 at time = 3.000000
+node0 : will send msg with id = 1 and content = $is the reproductive/$ structure found in flowering plants$and piggy backing ACK = 0 at time = 3.000000
+node0 : will drop message with id = 2 and content = $(plants of the division Magnoliophyta, also called// angiosperms/$).$and piggy backing ACK =0 at time = 3.000000
+node0 : will send msg with id = 3 and content = $The biological function of a flower is to facilitate reproduction,$and piggy backing ACK = 0 at time = 3.000000
+node1 : received message with id = 0 and content = A flowgr, sometimes known as a bloom or blossom  with Modification and NACK = 3  and piggy backing ACK =0 at time = 3.650000
+node1 Error Position = 331Corrected message = A flower, sometimes known as a bloom or blossom.
+node1 : will send msg with id = 0 and content = $The violin, sometimes known as a fiddle$and piggy backing ACK = 1 at time = 3.650000
+node1 : will send msg with id = 1 and content = $is a wooden chordophone (string instrument)$ with Duplication and piggy backing ACK = 1 at time = 3.650000
+node1 : will drop message with id = 2 and content = $in the violin family.$and piggy backing ACK =1 at time = 3.650000
+node1 : will drop message with id = 3 and content = $Most violins have a hollow wooden body.$and piggy backing ACK =1 at time = 3.650000
+node1 : received and drop  duplicated message with id = 0 with content = A flowgr, sometimes known as a bloom or blossomand piggy backing ACK =0 at time = 3.660000
+node1Payload has other type of error than modification
+node1 : received message with id = 1 and content = is the reproductive$ structure found in flowering plantsACK = 2   and piggy backing ACK =0 at time = 3.700000
+node1 No Error Deteced by hamming 
+node1 : received message! with id = 3 and content = The biological function of a flower is to facilitate reproduction,ACK = 2 and piggy backing ACK =0 at time = 3.800000
+node1 No Error Deteced by hamming 
+node0 : received message with id = 0 and content = The violin, sometimes known as a fiddleACK = 2   and piggy backing ACK =1 at time = 4.550000
+node0 No Error Deteced by hamming 
+node0 : will send msg with id = 4 and content = $usually by providing a mechanism for the union of sperm with eggs.$ with delay and piggy backing ACK = 1 at time = 4.550000
+node0 : received message with id = 1 and content = is a wooden chordophone (string instrument)ACK = 2   and piggy backing ACK =1 at time = 4.600000
+node0 No Error Deteced by hamming 
+node0 : received and drop  duplicated message with id = 1 with content = is a wooden chordophone (string instrument)and piggy backing ACK =1 at time = 4.610000
+node0Payload has other type of error than modification
+node1 : received message! with id = 4 and content = usually by providing a mechanism for the union of sperm with eggs.ACK = 2 and piggy backing ACK =1 at time = 8.650000
+node1 No Error Deteced by hamming 
+node1 : will send msg with id = 4 and content = $It is the smallest and thus highest-pitched instrument$and piggy backing ACK = 2 at time = 8.650000
+node0 : received message! with id = 4 and content = It is the smallest and thus highest-pitched instrumentACK = 2 and piggy backing ACK =2 at time = 10.600000
+node0 No Error Deteced by hamming 
+node0 : will send msg with id = 2 and content = $(plants of the division Magnoliophyta, also called// angiosperms/$).$RECEIVED NACKKand piggy backing ACK = 2 at time = 10.600000
+node1 : received message with id = 2 and content = (plants of the division Magnoliophyta, also called/ angiosperms$).  and piggy backing ACK =2 at time = 10.850000
+node1Payload has other type of error than modification
+node1 : will send msg with id = 2 and content = $in the violin family.$RECEIVED NACKKand piggy backing ACK = 3 at time = 10.850000
+node0 : received message with id = 2 and content = in the violin family.  and piggy backing ACK =3 at time = 11.100000
+node0Payload has other type of error than modification

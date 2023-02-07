@@ -1,0 +1,75 @@
+node2 : received msg from coordinator
+node2 : start to reading data from file
+node2 : finished reading from file...
+number of msgs = 8 and window size = 4..
+node3 : received msg from coordinator...
+node3 : Receiver to reading data from file
+node3 : finished reading from file...
+number of msgs = 5 and window size = 4..
+node2 : received self message to start sending messages at time = 7.000000
+node2 : will send msg with id = 0 and content = $Sherlock Holmes is a fictional detective$and piggy backing ACK = 0 at time = 7.000000
+node2 : will send msg with id = 1 and content = $created by British author/$ Sir Arthur Conan Doyle.$ with Duplication and piggy backing ACK = 0 at time = 7.000000
+node2 : will drop message with id = 2 and content = $Referring to himself as a// "consulting detective" in the stories,$and piggy backing ACK =0 at time = 7.000000
+node2 : will send msg with id = 3 and content = $Holmes is known for his proficiency with observation,$and piggy backing ACK = 0 at time = 7.000000
+
+#node2 send 0 1 3 (Drop 2 ) -> start of the node
+
+node3 : received message with id = 0 and content = Sherlock Holmes is a fictional detectiveACK = 2   and piggy backing ACK =0 at time = 9.400000
+node3 : will send msg with id = 0 and content = $A cherry blossom is a flower of many trees of genus/$ Prunus or Prunus subg.$ with delay and piggy backing ACK = 1 at time = 9.400000
+node3 : will send msg with id = 1 and content = $They are also known as Japanese cherry and Sakura$ with Duplication  with delay and piggy backing ACK = 1 at time = 9.400000
+node3 : will send msg with id = 2 and content = $They generally refer to /$ ornamental cherry trees,$and piggy backing ACK = 1 at time = 9.400000
+node3 : will send msg with id = 3 and content = $not to be confused with cherry trees that// produce fruit for eating.$and piggy backing ACK = 1 at time = 9.400000
+node3 : received message with id = 1 and content = created by British author$ Sir Arthur Conan Doyle.ACK = 2   and piggy backing ACK =0 at time = 9.450000
+node3 : received and drop  duplicated message with id = 1 with content = created by British author$ Sir Arthur Conan Doyle.and piggy backing ACK =0 at time = 9.460000
+node3 : received message (LOSS!!) with id = 3 and content = Holmes is known for his proficiency with observation,ACK = 2 and piggy backing ACK =0 at time = 9.550000
+
+#node3 rec 0 1 3 (Waiting 2 ) send 0 1 2 3 -> start of the node
+
+node2 : received message (LOSS!!) with id = 2 and content = They generally refer to $ ornamental cherry trees,ACK = 2 and piggy backing ACK =1 at time = 12.800000
+node2 : will send msg with id = 4 and content = $deduction, forensic science,$and piggy backing ACK = 0 at time = 12.800000
+node2 : will send msg with id = 5 and content = $and// logical reasoning/$ that borders on the fantastic,$and piggy backing ACK = 0 at time = 12.800000
+node2 : will drop message with id = 6 and content = $which he employs when investigating cases for a wide variety of clients,$and piggy backing ACK =0 at time = 12.800000
+node2 : will send msg with id = 7 and content = $including Scotland Yard.$and piggy backing ACK = 0 at time = 12.800000
+node2 : received message (LOSS!!) with id = 3 and content = not to be confused with cherry trees that/ produce fruit for eating.ACK = 2 and piggy backing ACK =1 at time = 12.850000
+node2 : finish sending frames at time = 12.850000
+node2 : received message with id = 0 and content = A cherry blossom is a flower of many trees of genus$ Prunus or Prunus subg.ACK = 2   and piggy backing ACK =1 at time = 15.700000
+node2 : received message with id = 1 and content = They are also known as Japanese cherry and SakuraACK = 2   and piggy backing ACK =1 at time = 15.750000
+node2 : received and drop  duplicated message with id = 1 with content = They are also known as Japanese cherry and Sakuraand piggy backing ACK =1 at time = 15.760000
+
+#node2 rec  0 1 2  3 send 4 5 6 (Drop 7 )
+
+node3 rece not ackkkkkkkk
+node3 : received message (LOSS!!) with id = 4 and content = deduction, forensic science,ACK = 2 and piggy backing ACK =0 at time = 17.100000
+node3 : will send msg with id = 0 and content = $A cherry blossom is a flower of many trees of genus/$ Prunus or Prunus subg.$RECEIVED NACKKand piggy backing ACK = 2 at time = 17.100000
+node3 : received message (LOSS!!) with id = 5 and content = and/ logical reasoning$ that borders on the fantastic,ACK = 2 and piggy backing ACK =0 at time = 17.150000
+node3 : received message (LOSS!!) with id = 7 and content = including Scotland Yard.ACK = 2 and piggy backing ACK =0 at time = 17.250000
+
+#node3 rec 4 5 7 (Waiting for 2 6 )
+
+node2 rece not ackkkkkkkk
+node2 : received and drop  duplicated message with id = 0 with content = A cherry blossom is a flower of many trees of genus$ Prunus or Prunus subg.and piggy backing ACK =2 at time = 17.350000
+node2 : will send msg with id = 2 and content = $Referring to himself as a// "consulting detective" in the stories,$RECEIVED NACKKand piggy backing ACK = 2 at time = 17.350000
+
+
+#node2 send 2
+
+node3 rece not ackkkkkkkk
+node3 : received nth as the paired node finished sending frames 
+node3 : received message with id = 2 and content = Referring to himself as a/ "consulting detective" in the stories,ACK = 2   and piggy backing ACK =2 at time = 17.600000
+node3 : received nth as the paired node finished sending frames 
+node3 : will send msg with id = 4 and content = $It is cqnsidered// the national flower of Japan.$ Modification and piggy backing ACK = 3 at time = 20.350000
+node3 : received nth as the paired node finished sending frames 
+node3 : finish sending frames at time = 20.450000
+
+#node3 rec 2 send 4 (Waiting 6 )
+
+Both nodes finished..session finished.. at time = 20.450000
+node3 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 20.510000
+node2 : received message (LOSS!!) with id = 4 and content = It is cqnsidered/ the national flower of Japan.  with Modification and NACK = 3and piggy backing ACK =3 at time = 25.200000
+
+#node2 rec 4
+
+node3 rece not ackkkkkkkk
+node3 : received nth as the paired node finished sending frames 
+Both nodes finished..session finished.. at time = 30.150000
